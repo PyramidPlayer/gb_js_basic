@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script>
+        "use strict";
+
+        // 3
+
+        function compareNumbers(x, y) {
+            if (x >= 0 && y >= 0) {
+                alert("Оба числа положительные. Разность: " + (x - y));
+            } else if (x < 0 && y < 0) {
+                alert("Оба числа отризательные. Произведение: " + (x * y));
+            } else {
+                alert("Числа разных знаков. Сумма: " + (a + b));
+            }
+        }
+
+        var a = Number(prompt("Введите первое число:"));
+        var b = Number(prompt("Введите второе число:"));
+        compareNumbers(a, b);
+
+        // 4
+
+        a = Math.floor(Math.random() * 16);
+        switch (a) {
+            case 0: alert(0);
+            case 1: alert(1);
+            case 2: alert(2);
+            case 3: alert(3);
+            case 4: alert(4);
+            case 5: alert(5);
+            case 6: alert(6);
+            case 7: alert(7);
+            case 8: alert(8);
+            case 9: alert(9);
+            case 10: alert(10);
+            case 11: alert(11);
+            case 12: alert(12);
+            case 13: alert(13);
+            case 14: alert(14);
+            case 15: alert(15);
+        }
+
+        // 5
+
+        function add(x, y) {
+            return x + y;
+        }
+
+        function substruct(x, y) {
+            return x - y;
+        }
+
+        function multiply(x, y) {
+            return x * y;
+        }
+
+        function divide(x, y) {
+            return x / y;
+        }
+
+        // 6
+
+        function mathOperation(arg1, arg2, operation) {
+            switch (operation) {
+                case "+": return add(arg1, arg2);
+                case "-": return substruct(arg1, arg2);
+                case "*": return multiply(arg1, arg2);
+                case "/": return divide(arg1, arg2);
+                default: alert("Unexpected operation");
+            }
+        }
+
+        var a1 = Number(prompt("Введите первый аргумент:"));
+        var a2 = Number(prompt("Введите второй аргумент:"));
+        var op = prompt("Введите операцию:");
+        alert(mathOperation(a1, a2, op));
+
+        // 7
+
+        alert(null == 0); // false, потому что null равен только null или undefined
+
+        // 8
+
+        function power(val, pow) {
+            if (pow == 1) {
+                return val;
+            }
+
+            return val * power(val, pow - 1);
+        }
+
+        var v = Number(prompt("Введите число:"));
+        var p = parseInt(prompt("Введите целую положительную степень:"));
+        alert(power(v, p));
+
+    </script>
+</head>
+
+</html>
