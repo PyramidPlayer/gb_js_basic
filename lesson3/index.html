@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script>
+        "use strict";
+
+        // 1
+        var simpleNumbers = [];
+        var i = 2; // Start from 2 because 1 is known simple and every number is dividing by 1 without the rest
+        while (i <= 100) {
+            var isSimple = true;
+            for (var j = 0; j < simpleNumbers.length; j++) {
+                var existingSimple = simpleNumbers[j];
+                if (i % existingSimple == 0) {
+                    isSimple = false;
+                    break;
+                }
+            }
+            if (isSimple) {
+                simpleNumbers.push(i);
+            }
+            i++;
+        }
+        simpleNumbers.unshift(1); // Add missing 1
+        console.log(simpleNumbers);
+
+        // 2
+        var basket1 = [
+            {price: 100, count: 5},
+            {price: 40, count: 1},
+            {price: 1000, count: 2}
+        ]
+
+        // 3
+        function countBasketPrice(basket) {
+            var totalPrice = 0;
+            for (var i = 0; i < basket.length; i++) {
+                totalPrice += basket[i].price * basket[i].count;
+            }
+            return totalPrice;
+        }
+        console.log(countBasketPrice(basket1));
+
+        // 4
+        for (var i = 0; i < 10; console.log(i++)) {
+
+        }
+
+        // 5
+        for (var i = 0; i < 20; i++) {
+            console.log("X".repeat(i+1));
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
